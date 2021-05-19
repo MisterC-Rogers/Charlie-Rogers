@@ -6,8 +6,8 @@ import indexStyles from '../styles/Index.module.css'
 export async function getStaticProps() {
   // make the connection to contentful
   const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_KEY
+    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_KEY
   })
 
   // content_type tells which models to get 

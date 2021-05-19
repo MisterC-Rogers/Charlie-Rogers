@@ -6,8 +6,8 @@ import pageStyles from '../../styles/Page.module.css'
 
 // the getStaticPages and getStaticProps run on build 
 const client = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID,
-  accessToken: process.env.CONTENTFUL_ACCESS_KEY
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_KEY
 })
 
 // make a path for each item type you are trying to receive
