@@ -3,6 +3,10 @@ import Image from 'next/image'
 
 import cardStyles from '../styles/Card.module.css'
 
+const myLoader = ({ src }) => {
+    return `${src}`
+}
+
 const Card = ({ recipe }) => {
     const { title, slug, cookingTime, thumbnail } = recipe.fields
 
@@ -15,6 +19,7 @@ const Card = ({ recipe }) => {
                     NOTE: the  Image component lazy loads the images 
                 */}
                 <Image
+                    loader={ myLoader }
                     src={`https:${thumbnail.fields.file.url}`}
                     width={thumbnail.fields.file.details.image.width}
                     height={ thumbnail.fields.file.details.image.height}
