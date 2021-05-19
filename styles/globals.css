@@ -29,13 +29,10 @@ header span {
   line-height: 1em;
 }
 header span:first-child {
-  font-size: 1em;
-  font-weight: 400;
-}
-header span:last-child {
   font-size: 1.5em;
   font-weight: 800;
 }
+
 header h2 {
   font-size: 1.2em;
   font-weight: 400;
@@ -43,7 +40,7 @@ header h2 {
 footer {
   background: #111;
   color: #bbb;
-  padding: 40px;
+  padding: 1px;
   text-align: center;
   margin-top: auto
 }
