@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
 import cardStyles from '../styles/Card.module.css'
 
@@ -13,13 +12,7 @@ const Card = ({ recipe }) => {
     return (
         <div className={cardStyles.card}>
             <div className={cardStyles.featured}>
-                {/* 
-                    to use the Image component with next you have to whitelist the domain in the next.config.js file.
-                    the width and height are required
-                    NOTE: the  Image component lazy loads the images 
-                */}
-                <Image
-                    loader={ myLoader }
+                <img
                     src={`https:${thumbnail.fields.file.url}`}
                     width={thumbnail.fields.file.details.image.width}
                     height={ thumbnail.fields.file.details.image.height}
