@@ -1,0 +1,22 @@
+.banner h2 {
+    margin: 0;
+    background: #fff;
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+    top: -60px;
+    left: -10px;
+    transform: rotateZ(-1deg);
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+.info p {
+    margin: 0;
+}
+/* makes a comma after each map item */
+.info span::after {
+    content: ", ";
+}
+/* places a period at the end of the map items */
+.info span:last-child::after {
+    content: ".";
+}
