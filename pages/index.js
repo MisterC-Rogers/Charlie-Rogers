@@ -17,9 +17,7 @@ export async function getStaticProps() {
   return {
     props: {
       recipes: res.items
-    },
-    // incremental change 30 secs
-    revalidate: 30
+    }
   }
 }
 

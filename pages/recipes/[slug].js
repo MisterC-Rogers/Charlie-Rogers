@@ -1,5 +1,5 @@
 import { createClient } from 'contentful'
-import Image from 'next/image'
+// import Image from 'next/image'
 
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Skeleton from '../../components/Skeleton'
@@ -46,9 +46,7 @@ export const getStaticProps = async ({ params }) => {
   }
 
   return {
-    props: { recipe: items[0] },
-    // incremental change 30 secs
-    revalidate: 30
+    props: { recipe: items[0] }
   }
 
 }
@@ -61,7 +59,7 @@ export default function RecipeDetails({ recipe }) {
   return (
     <div>
       <div className={ pageStyles.banner }>
-        <Image
+        <img
           src={ `https:${featuredImage.fields.file.url}` }
           width={ 1200 }
           height={ 500 }
