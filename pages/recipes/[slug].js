@@ -1,5 +1,8 @@
 import { createClient } from 'contentful'
+import Image from 'next/image'
+
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import Skeleton from '../../components/Skeleton'
 
 import pageStyles from '../../styles/Page.module.css'
 
@@ -21,33 +24,47 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false
+    fallback: true
   }
 }
 
 // gets the item and because the slug is unique it only gets one of though ti is still returned as an array
-
 export const getStaticProps = async ({ params }) => {
   const { items } = await client.getEntries({
     content_type: 'recipe',
     'fields.slug': params.slug
   })
 
+  // redirect to the home page if the slug does not exist
+  if (!items.length) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false
+      }
+    }
+  }
+
   return {
-    props: { recipe: items[0] }
+    props: { recipe: items[0] },
+    // incremental change 30 secs
+    revalidate: 30
   }
 
 }
 
 export default function RecipeDetails({ recipe }) {
+
+  if (!recipe) return <Skeleton />
+
   const { featuredImage, title, cookingTime, ingredients, method } = recipe.fields
   return (
     <div>
       <div className={ pageStyles.banner }>
-        <img
+        <Image
           src={ `https:${featuredImage.fields.file.url}` }
-          width={ featuredImage.fields.file.details.image.width}
-          height={ featuredImage.fields.file.details.image.height}
+          width={ 1200 }
+          height={ 500 }
         />
         <h2>{ title }</h2>
       </div>
