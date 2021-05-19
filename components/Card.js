@@ -13,6 +13,7 @@ const Card = ({ recipe }) => {
         <div className={cardStyles.card}>
             <div className={cardStyles.featured}>
                 <img
+                    className={ cardStyles.img }
                     src={`https:${thumbnail.fields.file.url}`}
                     width={thumbnail.fields.file.details.image.width}
                     height={ thumbnail.fields.file.details.image.height}
