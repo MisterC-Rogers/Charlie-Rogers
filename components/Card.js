@@ -1,5 +1,5 @@
 import Link from 'next/link'
-// import Image from 'next/image'
+
 import cardStyles from '../styles/Card.module.css'
 
 const Card = ({ recipe }) => {
@@ -11,8 +11,6 @@ const Card = ({ recipe }) => {
                 <img
                     className={ cardStyles.img }
                     src={`https:${thumbnail.fields.file.url}`}
-                    width={ 500 }
-                    height={ 500 }
                 />
             </div>
             <div className={cardStyles.content}>
