@@ -15,7 +15,8 @@
     "contentful": "^8.3.5",
     "next": "10.0.8",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-icons": "^4.2.0"
   },
   "repository": {
     "type": "git",

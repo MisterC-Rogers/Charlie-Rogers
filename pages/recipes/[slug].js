@@ -1,4 +1,5 @@
 import { createClient } from 'contentful'
+import SiteHead from '../../components/SiteHead'
 
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
@@ -53,6 +54,7 @@ export default function RecipeDetails({ recipe }) {
   const { featuredImage, title, cookingTime, ingredients, method } = recipe.fields
   return (
     <div>
+      <SiteHead title={ `BitLion Blog - ${title}` } />
       <div className={ pageStyles.banner }>
         <img
           src={ `https:${featuredImage.fields.file.url}` }
