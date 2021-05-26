@@ -20,9 +20,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MisterC-Rogers/Charlie-Rogers"
+    "url": "git+https://github.com/MisterC-Rogers/Charlie-Rogers.git"
   },
   "bugs": {
     "url": "https://github.com/MisterC-Rogers/Charlie-Rogers/issues"
-  }
+  },
+  "description": "This is the Basic starter for a next.js contentful blog",
+  "main": "index.js",
+  "devDependencies": {},
+  "license": "ISC"
 }
