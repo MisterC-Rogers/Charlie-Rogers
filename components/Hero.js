@@ -11,12 +11,12 @@ const Hero = ({ photos }) => {
             <style jsx>{`
                 .hero_container {
                     text-align: center;
-                    max-width: 95%;
-                    margin: 60px auto;
+                    max-width: 100%;
+                    margin: 30px auto;
                 }
                 .hero{
                     width: 100%;
-                    max-height: 400px;
+                    max-height: 500px;
                 }
             `}</style>
         </>
