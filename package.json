@@ -1,9 +1,9 @@
 {
-  "name": "bitlion-blog",
-  "homepage": "https://bitlion-blog.netlify.app/",
+  "name": "charlie-rogers",
+  "homepage": "https://charlierogers.tech/",
   "version": "0.1.0",
   "private": true,
-  "author": "BitLion LLC",
+  "author": "Charles Rogers",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -20,9 +20,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/BitLionLLC/next-contentful-blog"
+    "url": "https://github.com/MisterC-Rogers/Charlie-Rogers"
   },
   "bugs": {
-    "url": "https://github.com/BitLionLLC/next-contentful-blog/issues"
+    "url": "https://github.com/MisterC-Rogers/Charlie-Rogers/issues"
   }
 }
