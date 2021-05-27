@@ -6,6 +6,9 @@ body {
   font-family: 'Roboto';
   font-size: 1.5em;  
 }
+a{
+  text-decoration:none
+}
 .layout {
   min-height: 100vh;
   display: flex;
@@ -13,7 +16,7 @@ body {
 }
 .page-content {
   max-width: 1200px;
-  margin: 20px auto 80px;
+  margin: 18vh auto 80px;
   padding: 0 20px;
   width: 100%;
   box-sizing: border-box;

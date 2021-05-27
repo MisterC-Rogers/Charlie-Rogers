@@ -54,6 +54,9 @@ const Navbar = () => {
           nav {
             background: #fff;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            z-index:2;
+            width: 100vw;
           }
           .nav-header {
             display: flex;
