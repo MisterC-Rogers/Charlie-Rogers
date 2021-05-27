@@ -1,5 +1,6 @@
 import { createClient } from 'contentful'
 import SiteHead from '../../components/SiteHead'
+import Image from 'next/image'
 
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
@@ -13,7 +14,7 @@ const client = createClient({
 
 // make a path for each item type you are trying to receive
 export const getStaticPaths = async () => {
-  const res = await client.getEntries({ content_type: "blog" })
+  const res = await client.getEntries({ content_type: "blogPost" })
 
   const paths = res.items.map(item => {
     return {
@@ -30,7 +31,7 @@ export const getStaticPaths = async () => {
 // gets the item and because the slug is unique it only gets one of though ti is still returned as an array
 export const getStaticProps = async ({ params }) => {
   const { items } = await client.getEntries({
-    content_type: 'blog',
+    content_type: 'blogPost',
     'fields.slug': params.slug
   })
 
@@ -45,39 +46,37 @@ export const getStaticProps = async ({ params }) => {
   }
 
   return {
-    props: { blog: items[0] }
+    props: { post: items[0] }
   }
 
 }
 
-export default function BlogDetails({ blog }) {
-  const { featuredImage, title, cookingTime, ingredients, method } = blog.fields
+export default function BlogDetails({ post }) {
+  const { coverImage, title, body, publishedDate } = post.fields
   return (
     <div>
       <SiteHead title={ `Charlie Rogers Blog - ${title}` } />
       <div className={ pageStyles.banner }>
-        <img
-          src={ `https:${featuredImage.fields.file.url}` }
+        <Image
+          src={ `https:${coverImage.fields.file.url}` }
           width={ 1200 }
           height={ 500 }
         />
         <h2>{ title }</h2>
       </div>
       <div className={pageStyles.info}>
-        {/* <p>Takes about {cookingTime} mins to cook.</p> */}
-        <h3>ingredients:</h3>
-        {/* {ingredients.map((ingredient, index) => (
-          <span key={ index }>{ ingredient }</span>
-        ))} */}
+        <p>Upload Date: {publishedDate}</p>
       </div>
       <div className="method">
-        <h3>Method:</h3>
-        {/* <div>{documentToReactComponents(method)}</div> */}
+        <div>{documentToReactComponents(body)}</div>
       </div>
 
       <style jsx>{`
         h2,h3 {
           text-transform: uppercase;
+        }
+        .method{
+          text-align: center;
         }
       `}</style>
     </div>

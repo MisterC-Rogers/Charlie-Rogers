@@ -2,8 +2,8 @@ import Link from 'next/link'
 
 import cardStyles from '../styles/Card.module.css'
 
-const BlogCard = ({ blog }) => {
-    const { title, slug, thumbnail } = blog.fields
+const BlogCard = ({ post }) => {
+    const { title, slug, thumbnail, excerpt } = post.fields
 
     return (
         <div className={cardStyles.card}>
@@ -16,6 +16,7 @@ const BlogCard = ({ blog }) => {
             <div className={cardStyles.content}>
                 <div className={cardStyles.info}>
                     <h4>{title}</h4>
+                    <p>{ excerpt }</p>
                 </div>
                 <div className={cardStyles.actions}>
                     <Link href={ `/blogs/${slug}` }><a>Read this</a></Link>
