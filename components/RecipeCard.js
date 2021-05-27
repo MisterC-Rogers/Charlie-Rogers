@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import cardStyles from '../styles/Card.module.css'
 
-const Card = ({ recipe }) => {
+const RecipeCard = ({ recipe }) => {
     const { title, slug, cookingTime, thumbnail } = recipe.fields
 
     return (
@@ -26,4 +26,4 @@ const Card = ({ recipe }) => {
     )
 }
 
-export default Card
+export default RecipeCard

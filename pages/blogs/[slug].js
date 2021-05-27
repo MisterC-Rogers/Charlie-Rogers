@@ -1,6 +1,5 @@
 import { createClient } from 'contentful'
 import SiteHead from '../../components/SiteHead'
-import Image from 'next/image'
 
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
@@ -14,7 +13,7 @@ const client = createClient({
 
 // make a path for each item type you are trying to receive
 export const getStaticPaths = async () => {
-  const res = await client.getEntries({ content_type: "recipe" })
+  const res = await client.getEntries({ content_type: "blog" })
 
   const paths = res.items.map(item => {
     return {
@@ -31,7 +30,7 @@ export const getStaticPaths = async () => {
 // gets the item and because the slug is unique it only gets one of though ti is still returned as an array
 export const getStaticProps = async ({ params }) => {
   const { items } = await client.getEntries({
-    content_type: 'recipe',
+    content_type: 'blog',
     'fields.slug': params.slug
   })
 
@@ -46,45 +45,39 @@ export const getStaticProps = async ({ params }) => {
   }
 
   return {
-    props: { recipe: items[0] }
+    props: { blog: items[0] }
   }
 
 }
 
-export default function RecipeDetails({ recipe }) {
-  const { featuredImage, title, cookingTime, ingredients, method } = recipe.fields
+export default function BlogDetails({ blog }) {
+  const { featuredImage, title, cookingTime, ingredients, method } = blog.fields
   return (
     <div>
-      <SiteHead title={ `BitLion Blog - ${title}` } />
+      <SiteHead title={ `Charlie Rogers Blog - ${title}` } />
       <div className={ pageStyles.banner }>
-        <Image
-          src={`https:${featuredImage.fields.file.url}`}
-          alt="Picture of the finished Recipe"
+        <img
+          src={ `https:${featuredImage.fields.file.url}` }
           width={ 1200 }
           height={ 500 }
         />
         <h2>{ title }</h2>
       </div>
       <div className={pageStyles.info}>
-        <p>Takes about {cookingTime} mins to cook.</p>
+        {/* <p>Takes about {cookingTime} mins to cook.</p> */}
         <h3>ingredients:</h3>
-        <ul>
-          {ingredients.map((ingredient, index) => (
-          <li key={ index }> <input type='checkbox' /> { ingredient }</li>
-          ))}
-        </ul>
+        {/* {ingredients.map((ingredient, index) => (
+          <span key={ index }>{ ingredient }</span>
+        ))} */}
       </div>
       <div className="method">
-        <h3>Cook Directions:</h3>
-        <div>{documentToReactComponents(method)}</div>
+        <h3>Method:</h3>
+        {/* <div>{documentToReactComponents(method)}</div> */}
       </div>
 
       <style jsx>{`
         h2,h3 {
           text-transform: uppercase;
-        }
-        ul {
-          list-style-type: none;
         }
       `}</style>
     </div>

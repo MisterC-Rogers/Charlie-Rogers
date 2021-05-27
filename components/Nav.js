@@ -34,6 +34,7 @@ const Navbar = () => {
           <ul className='links' ref={linksRef}>
             <Link href='/'><a>Home</a></Link>
             <Link href='/blog'><a>Blog</a></Link>
+            <Link href='/recipes'><a>Recipes</a></Link>
             <Link href='/about'><a>About</a></Link>
             <Link href='/contact'><a>Contact</a></Link>
           </ul>
