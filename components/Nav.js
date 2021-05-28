@@ -25,7 +25,7 @@ const Navbar = () => {
     <nav>
       <div className='nav-center'>
         <div className='nav-header'>
-          <Link href='/'><a><img src='/Charlie-Rogers.png' className='logo' alt='logo' /></a></Link>
+          <Link href='/'><a><img src='/Charlie-Rogers.png' className='logo' alt='logo' height= '100px;' width='auto'/></a></Link>
           <button className='nav-toggle' onClick={toggleLinks}>
             <FaBars />
           </button>  
@@ -41,10 +41,10 @@ const Navbar = () => {
         </div>
         <ul className='social-icons'>
           {social.map((socialIcon) => {
-            const { id, url, icon } = socialIcon;
+            const { id, url, icon, linkName } = socialIcon;
             return (
               <li key={id}>
-                <a href={url} target='_blank' rel="noreferrer">{icon}</a>
+                <a href={url} target='_blank' rel="noreferrer" aria-label={linkName}>{icon}</a>
               </li>
             );
           })}

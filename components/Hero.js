@@ -6,6 +6,8 @@ const Hero = ({ photos }) => {
                     src={`https:${photos[0].fields.image.fields.file.url}`}
                     alt={`${photos[0].fields.title}`}
                     className="hero"
+                    width="1600px"
+                    height="500px"
                 />
             </div>
             <style jsx>{`

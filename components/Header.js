@@ -6,10 +6,10 @@ return (
     <div className={ headerStyles.header}>
         <div className={headerStyles.info}>
         <h1 className="line_1 anim_typewriter">Charlie Rogers</h1>
-        <h4>Full Stack Web Developer</h4>
+        <h2>Full Stack Web Developer</h2>
             <div className={headerStyles.meta}>
-                <a  href="https://twitter.com/MisterCRogers" target="_b" className={headerStyles.author}></a>
-                <span>By <a href="https://twitter.com/MisterCRogers" target="_b">Charlie Rogers</a></span>
+                <a  href="https://twitter.com/MisterCRogers" target="_b" className={headerStyles.author} aria-label="Twitter"></a>
+                <span>By <a href="https://twitter.com/MisterCRogers" target="_b" aria-label="Twitter">Charlie Rogers</a></span>
             </div>
         </div>
         <style jsx>{`
