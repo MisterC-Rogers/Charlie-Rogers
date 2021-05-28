@@ -1,6 +1,7 @@
 import Card from '../components/BlogCard'
 import { createClient } from 'contentful'
 import blogStyles from '../styles/Blog.module.css'
+import SiteHead from '../components/SiteHead'
 
 export async function getStaticProps() {
     // make the connection to contentful
@@ -20,14 +21,17 @@ export async function getStaticProps() {
 }
   
 const blog = ({ posts }) => {
-    return (
+  return (
+    <>
+      <SiteHead title="Charlie Rogers Blogs" description="A collection of blog posts from the thoughts and ideas running through Charlie Rogers' head. Enjoy." />
         <div className={blogStyles.blogList_container}>
-            <div className={blogStyles.blogList}>
-                {posts.map(post => (
-                <Card key={post.sys.id} post={ post }/>
-                ))}
+          <div className={blogStyles.blogList}>
+              {posts.map(post => (
+              <Card key={post.sys.id} post={ post }/>
+              ))}
+          </div>
         </div>
-        </div>
+      </>
     )
 }
 

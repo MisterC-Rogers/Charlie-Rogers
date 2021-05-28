@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SiteHead from "../components/SiteHead";
 import contactStyles from '../styles/Contact.module.css'
 
 const Contact = () => {
@@ -60,6 +61,8 @@ const Contact = () => {
   };
 
   return (
+    <>
+      <SiteHead title="Charlie Rogers Contact Page" description="Charlie Rogers contact page. A form where a user can submit a question."/>
       <div className={contactStyles.contact_container}>
         <form
           className={contactStyles.form}
@@ -142,7 +145,8 @@ const Contact = () => {
             </div>
           )}
         </form>
-    </div>
+      </div>
+    </>
   );
 };
 

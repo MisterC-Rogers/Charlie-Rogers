@@ -1,6 +1,7 @@
 import RecipeCard from '../components/RecipeCard'
 import { createClient } from 'contentful'
 import recipeStyles from '../styles/Recipes.module.css'
+import SiteHead from '../components/SiteHead'
 
 export async function getStaticProps() {
     // make the connection to contentful
@@ -20,14 +21,17 @@ export async function getStaticProps() {
 }
   
 const recipes = ({ recipes }) => {
-    return (
+  return (
+    <>
+      <SiteHead title="Charlie Rogers Recipes" description="A collection page displaying a visual list of recipes Charlie Rogers really loves." />
         <div className={recipeStyles.recipeList_container}>
             <div className={recipeStyles.recipeList}>
                 {recipes.map(recipe => (
                 <RecipeCard key={recipe.sys.id} recipe={ recipe }/>
                 ))}
             </div>
-        </div>
+      </div>
+      </>
     )
 }
 

@@ -55,7 +55,7 @@ export default function BlogDetails({ post }) {
   const { coverImage, title, body, publishedDate } = post.fields
   return (
     <div>
-      <SiteHead title={ `Charlie Rogers Blog - ${title}` } />
+      <SiteHead title={ `Charlie Rogers Blog - ${title}` } description={`${title}. This page contains the thoughts and ideas of Charlie Rogers.`} />
       <div className={ pageStyles.banner }>
         <Image
           src={ `https:${coverImage.fields.file.url}` }
