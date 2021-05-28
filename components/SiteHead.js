@@ -11,7 +11,7 @@ const SiteHead = ({ title, description }) => {
         <meta name="description" content={description} />
         {/* Twitter */}
         <meta name="twitter:card" content="summary" key="twcard" />
-        <meta name="twitter:creator" content={MisterCRogers} key="twhandle" />
+        <meta name="twitter:creator" content='MisterCRogers' key="twhandle" />
         {/* Open Graph */}    
         <meta property="og:title" content={title} key="ogtitle" />
         <meta property="og:description" content={description} key="ogdesc" />
