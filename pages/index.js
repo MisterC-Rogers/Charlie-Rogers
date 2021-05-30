@@ -26,12 +26,12 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <>
-      <SiteHead title="Charlie Rogers" description="Welcome to the Charlie Rogers web page. Built and maintained by myself." />
+      <SiteHead title="Charlie Rogers" description="Welcome to the Charlie Rogers web page. I am hungry for knowledge, always looking for the how and why something is the way it is.." />
       <Header />
       {/* <Hero photos={photos} /> */}
       <h2>A Little About Me</h2>
       <p>
-        Kinfolk selvage ready made, palo santo dream catcher PBR&B locavore asymmetrical fashion axe paleo twee chia tousled cronut. Four dollar toast irony ugh, photo booth try-hard man bun shaman gluten-free meditation vaporware everyday carry. Viral everyday carry YOLO authentic tousled activated charcoal copper mug beard brooklyn street art shabby chic twee. Portland lomo tattooed XOXO kogi tilde hexagon tousled bio-diesel you probably haven't heard of them mlkshk semiotics. Gentrify taxidermy austin PBR&B. Subway tile franzen live-edge put a bird on it, skateboard micro dosing distillery chill wave adaptogen selfies actually. Man bun tote bag hammock blog pickled.
+        Creative and people-oriented Full Stack Web Developer with project management experience. Strong knowledge of the creations programming languages relevant to the web. Adept at motivating self and others. Passionate about computer science and educating the next wave of programmers. Hungry for knowledge, always looking for the how and why something is the way it is. Never settling for the short answer.
       </p>
        <Link href='/about' as='About Us'><a>Find out more...</a></Link>
       <style jsx>{`
