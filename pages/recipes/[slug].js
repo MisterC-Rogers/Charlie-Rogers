@@ -55,7 +55,7 @@ export default function RecipeDetails({ recipe }) {
   const { featuredImage, title, cookingTime, ingredients, method } = recipe.fields
   return (
     <div>
-      <SiteHead title={ `BitLion Blog - ${title}` } description={`This webpage contains the instructions for how to make ${title}.`} />
+      <SiteHead title={ `Charlie Rogers Recipes - ${title}` } description={`This webpage contains the instructions for how to make ${title}.`} />
       <div className={ pageStyles.banner }>
         <Image
           src={`https:${featuredImage.fields.file.url}`}
