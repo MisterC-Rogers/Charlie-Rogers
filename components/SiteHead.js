@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 const SiteHead = ({ title, description }) => {
-    const image = '/Charlie-Rogers.png'
+    // const image = '/Charlie-Rogers.png'
     return (
         <Head>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,7 +18,7 @@ const SiteHead = ({ title, description }) => {
             <meta property="og:description" content={description} key="ogdesc" />
             <meta property="og:site_name" content="Charlie Rogers" key="ogsitename" />
             <meta property="og:url" content="https://www.charlierogers.tech" key="ogurl" />
-            <meta property="og:image" content={image} key="ogimage" />
+            {/* <meta property="og:image" content={image} key="ogimage" /> */}
             <html lang='en' />
                 
             <link rel="icon" href="/Charlie-Rogers.png" />
