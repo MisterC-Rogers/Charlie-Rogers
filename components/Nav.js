@@ -25,7 +25,7 @@ const Navbar = () => {
     <nav>
       <div className='nav-center'>
         <div className='nav-header'>
-          <Link href='/'><a><img src='/Charlie-Rogers.png' className='logo' alt='logo' height= '100px;' width='auto'/></a></Link>
+          <Link href='/'><a><img src='https://scontent.fphx1-2.fna.fbcdn.net/v/t1.6435-9/186515353_4354629537880720_1246667676013037597_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=730e14&_nc_ohc=a7OfojG7lPsAX8k0w8P&_nc_ht=scontent.fphx1-2.fna&oh=1fcd8274c6b64fd10016d56beea27577&oe=60D3DC13' className='logo' alt='logo' height= '100px;' width='auto'/></a></Link>
           <button className='nav-toggle' onClick={toggleLinks}>
             <FaBars />
           </button>  
