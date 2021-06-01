@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 const SiteHead = ({ title, description }) => {
-    const image = 'https://scontent.fphx1-2.fna.fbcdn.net/v/t1.6435-9/186515353_4354629537880720_1246667676013037597_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=730e14&_nc_ohc=a7OfojG7lPsAX8k0w8P&_nc_ht=scontent.fphx1-2.fna&oh=1fcd8274c6b64fd10016d56beea27577&oe=60D3DC13'
+    const image = '/Charlie-Rogers.png'
     return (
         <Head>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,7 +21,7 @@ const SiteHead = ({ title, description }) => {
             <meta property="og:image" content={image} key="ogimage" />
             <html lang='en' />
                 
-            <link rel="icon" href="/Charlie-Rogers.png" />
+            <link rel="icon" href="/favicon.ico" />
         </Head>
     )
 }
