@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 const SiteHead = ({ title, description }) => {
-    const image = 'http://www.charlierogers.tech/Charlie-Rogers.png'
+    const image = '/Charlie-Rogers.png'
     return (
         <Head>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
